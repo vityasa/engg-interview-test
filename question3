@@ -6,7 +6,14 @@ Iff it's possible to make a square using any of the four points plotted so far, 
 Otherwise, the response is just an acknowledgement of the input.
 Once a successful response is returned, further calls to the API should just return the same response.
 
-E.g:
+Bounds:
+* Assumption 1: All input points can be assumed to lie in the positive quadrant.
+* Assumption 2: You only need to consider axes-parallel squares (no tilted squares).
+
+Bonus:
+Support anonymous sessions so that it works for simultaneous users (using different clients).
+
+Example request/response:
 
 POST /plot
 {
