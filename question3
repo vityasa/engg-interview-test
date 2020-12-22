@@ -1,0 +1,61 @@
+Write a web application in Python 3 with one endpoint that accepts (x, y) coordinate values on a 2D plane.
+The response is a function of the current (x, y) input as well as the previously passed values.
+
+Response:
+Iff it's possible to make a square using any of the four points plotted so far, return the 4 points formatted as a string.
+Otherwise, the response is just an acknowledgement of the input.
+Once a successful response is returned, further calls to the API should just return the same response.
+
+Bounds:
+* Assumption 1: All input points can be assumed to lie in the positive quadrant.
+* Assumption 2: You only need to consider axes-parallel squares (no tilted squares).
+
+Bonus:
+Support anonymous sessions so that it works for simultaneous users (using different clients).
+
+Example request/response:
+
+POST /plot
+{
+  "x": 1, "y": 1
+}
+Output:
+{
+  "status": "accepted"
+}
+
+POST /plot
+{
+  "x": 1, "y": 5
+}
+Output:
+{
+  "status": "accepted"
+}
+
+POST /plot
+{
+  "x": 5, "y": 1
+}
+Output:
+{
+  "status": "accepted"
+}
+
+POST /plot
+{
+  "x": 5, "y": 2
+}
+Output:
+{
+  "status": "accepted"
+}
+
+POST /plot
+{
+  "x": 5, "y": 5
+}
+Output:
+{
+  "status": "Success (1, 1) (1, 5) (5, 1) (5, 5)"
+}
