@@ -1,4 +1,4 @@
-Write a web application in Python 3 that will take n items input and return the following stats about the positive integers in the dataset in JSON format. Eg:
+Write a web application (only API, no UI) in Python 3 that will take n items input and return the following stats about the positive integers in the dataset in JSON format. Eg:
 
 Input:
 POST /items

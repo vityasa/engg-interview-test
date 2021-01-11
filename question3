@@ -1,4 +1,4 @@
-Write a web application in Python 3 with one endpoint that accepts (x, y) coordinate values on a 2D plane.
+Write a web application (only API, no UI) in Python 3 with one endpoint that accepts (x, y) coordinate values on a 2D plane.
 The response is a function of the current (x, y) input as well as the previously passed values.
 
 Response:
